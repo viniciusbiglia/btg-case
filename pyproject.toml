@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "btg-energy-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Candidato <Candidato@acme.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pandas = "2.0.3"
+numpy = "1.25.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
