@@ -42,7 +42,7 @@ def apply_contour(contour_df: pd.DataFrame, data_df: pd.DataFrame) -> pd.DataFra
 
 def main() -> None:
     # Importando os arquivos de forecast e consolidando
-    forecast_folder = "forecast_files"
+    forecast_folder = r"C:\Users\Vasconcelos\Desktop\Nova pasta\btg-energy-challenge\btg-energy-challenge\forecast_files"
     dfs = []
     for file in os.listdir(forecast_folder):
         path = os.path.join(forecast_folder, file)
@@ -59,7 +59,7 @@ def main() -> None:
     df_forecast = pd.concat(dfs, ignore_index=True)
 
     # Importando arquivo de contorno da região
-    contour = read_contour_file("PSATCMG_CAMARGOS.bln")
+    contour = read_contour_file(r"C:\Users\Vasconcelos\Desktop\Nova pasta\btg-energy-challenge\btg-energy-challenge\PSATCMG_CAMARGOS.bln")
 
     # Gerando GeoDataFrame da Região e calculando os pontos contidos
     geometry_regiao = [Point(xy) for xy in zip(contour["long"], contour["lat"])]
